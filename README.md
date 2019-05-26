@@ -187,7 +187,7 @@ app.listen(3000, () => {
 
 public/index.html
 ----------------
-
+<pre>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -207,12 +207,13 @@ public/index.html
 
 </body>
 </html>
+</pre>
 ----------------------------------------------------------
 
 http://35.198.86.178:3000/
 
 -----------------------------------------------------------
-OUT 1
+
 ![Alt text] (parameters.png)
 
 //OUT 2
