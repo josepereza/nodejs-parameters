@@ -5,6 +5,8 @@ How to Get URL Parameters with Javascript
 -----------------------------------------
 The URL and URLSearchParams Objects
 A URL object basically represents a url. The search property of the URL object returns the string of query parameters.
+
+```ruby
 // new URL object
 var url = new URL('http://demo.com?id=100&topic=main');
 
@@ -20,12 +22,12 @@ var query_string = url.search;
 var search_params = new URLSearchParams(query_string); 
 
 var id = search_params.get('id');
-
+```
 // output : 100
 console.log(id);
 
 EJEMPLO:
-
+```ruby
 <script type="text/javascript">
           window.onload = articulo;
 
@@ -41,10 +43,11 @@ EJEMPLO:
               var dato2 = search_params.get('dato2');
               var dato3 = search_params.get('dato3');
 </script>
-
+```
 **********************************************************************************************************************
 Getting URL Parameters in Node.js
 ----------------------------------
+```ruby
 var express = require('express');
 var http = require('http');
 var app = express();
@@ -73,8 +76,8 @@ app.get('/:name1/:name2/:name3', function(req, res){
   });
 
 app.listen(3000);
-
-
+```
+```ruby
 http://35.198.86.178:3000/juan/pedro/martinez
 //output
 name1: juan
@@ -89,6 +92,7 @@ fruit: pera
 query: [object Object]
 That's all folks
 {"name":"jose","fruit":"pera"}
+```
 ******************************************************************************************
 
 
@@ -97,6 +101,8 @@ How to process POST data in Node.js?
 
 If you use Express (high-performance, high-class web development for Node.js), you can do this:
 HTML:
+
+```ruby
 <form method="post" action="/">
     <input type="text" name="user[name]">
     <input type="text" name="user[email]">
@@ -115,7 +121,12 @@ fetch('/', {
         }
     })
 });
+
+```
 Node.js: (since Express v4.16.0)
+
+
+```ruby
 // Parse URL-encoded bodies (as sent by HTML forms)
 app.use(express.urlencoded());
 
@@ -127,7 +138,13 @@ app.post('/', function(request, response){
     console.log(request.body.user.name);
     console.log(request.body.user.email);
 });
+
+
+```
 Node.js: (for Express <4.16.0)
+
+
+```ruby
 const bodyParser = require("body-parser");
 
 /** bodyParser.urlencoded(options)
@@ -148,10 +165,15 @@ app.post("/", function (req, res) {
     console.log(req.body.user.name)
 });
 
+```
+
 EJEMPLO:
 
 app.js
 ------
+
+```ruby
+
 var express = require('express');
 var http = require('http');
 var app = express();
@@ -185,9 +207,11 @@ app.listen(3000, () => {
     console.log('escuchando en el puerto 3000')
 });
 
+```
 public/index.html
 ----------------
-<pre>
+
+```ruby
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -207,17 +231,22 @@ public/index.html
 
 </body>
 </html>
-</pre>
+
+```
+
 ----------------------------------------------------------
 
 http://35.198.86.178:3000/
 
 -----------------------------------------------------------
 
+
 ![Alt text] (parameters.png)
+
 
 //OUT 2
 
+```ruby
 Nombre : Juan felipe
 Telefono: 111222
 objeto: [object Object]
@@ -225,3 +254,4 @@ That's all folks
 {"name":"Juan felipe","telefono":"111222"}
 
 
+```
