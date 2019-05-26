@@ -239,9 +239,12 @@ public/index.html
 http://35.198.86.178:3000/
 
 -----------------------------------------------------------
+```ruby
 
+hola mundos 
 
-![Alt text] (parameters.png)
+    Nombre .........................   Telefon .........................   submit
+```
 
 
 //OUT 2
