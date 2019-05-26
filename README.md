@@ -85,6 +85,7 @@ name2: pedro
 name3: martinez
 That's all folks
 {"name1":"juan","name2":"pedro","name3":"martinez"}
+
 http://35.198.86.178:3000/variables/?name=jose&fruit=pera
 //output
 name: jose
